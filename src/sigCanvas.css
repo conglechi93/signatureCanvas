@@ -1,0 +1,35 @@
+.signatureCanvas {
+  border: 1px solid black;
+  width: 100%;
+  min-height: 500px;
+}
+
+.save-btn {
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 21px;
+  min-width: 100px;
+  background: #1363b9;
+  border: none;
+  color: #FFFFFF;
+  margin: 5px;
+  font-size: 18px;
+}
+
+.clear-btn {
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 21px;
+  min-width: 100px;
+  background: #FFFFFF;
+  border: none;
+  color: #1363b9;
+  border: 1px solid #1363b9;
+  margin: 5px;
+  font-size: 18px;
+}
+
+.signature-img {
+  width: 300px !important;
+  height: 200px !important;
+}
