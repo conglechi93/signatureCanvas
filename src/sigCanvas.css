@@ -33,3 +33,26 @@
   width: 300px !important;
   height: 200px !important;
 }
+
+.layout-title {
+  text-align: left;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.ant-layout-header {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+.header-layout {
+  padding: 20px 0;
+  background-color: #001529;
+}
+
+.ant-layout-sider  {
+  background-color: #FFFFFF !important;
+}
+
+.ant-menu-dark {
+  background-color: #FFFFFF !important;
+}
