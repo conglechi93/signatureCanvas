@@ -56,3 +56,15 @@
 .ant-menu-dark {
   background-color: #FFFFFF !important;
 }
+
+.header-layout {
+  padding: 10px;
+  background-color: #1976d2 !important;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.ant-menu-title-content {
+  font-size: 16.5px;
+}
+

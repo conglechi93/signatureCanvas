@@ -5,6 +5,7 @@ import "./App.css";
 import "./sigCanvas.css";
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import {
+  MenuFoldOutlined,
   DesktopOutlined,
 } from '@ant-design/icons';
 
@@ -44,24 +45,20 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <div className="header-layout"></div>
-      </div>
-      <Layout 
-      // style={{ minHeight: '100vh' }}
-      >
-      <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-        {/* <div style={{ height: 32, margin: 16, background: 'rgba(255, 255, 255, 0.2)' }} /> */}
+      <Layout >
+      <Sider collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
         <div style={{ margin: 16}}></div>
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
       </Sider>
       <Layout className="site-layout">
-        <Header style={{ padding: 0, background: colorBgContainer }} />
+        <Header className='header-layout'>
+          <MenuFoldOutlined style={{marginTop:'10px'}} onClick={() => setCollapsed(!collapsed)}/>
+          </Header>
         <Content style={{ margin: '0 16px' }}>
           <div style={{ padding: 24, minHeight: 360, background: colorBgContainer }}>
           <div className="layout-title">Quản lí chữ ký số </div>
             <SignaturePad
-                    ref={sigCanvas}
+                     ref={sigCanvas}
                     canvasProps={{
                       className: "signatureCanvas"
                     }}
