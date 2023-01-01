@@ -1,9 +1,9 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Popup from "reactjs-popup";
 import SignaturePad from "react-signature-canvas";
 import "./App.css";
 import "./sigCanvas.css";
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { Breadcrumb, Button, Form, Input, Layout, Menu, theme } from 'antd';
 import {
   MenuFoldOutlined,
   DesktopOutlined,
@@ -26,6 +26,10 @@ function App() {
   const save = () => {
     setImageURL(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
   }
+
+  useEffect(() => {
+    console.log("imageURL", imageURL);
+  }, [imageURL])
 
   const getItem = (label, key, icon, children) => {
     return {
@@ -56,6 +60,35 @@ function App() {
           </Header>
         <Content style={{ margin: '0 16px' }}>
           <div style={{ padding: 24, minHeight: 360, background: colorBgContainer }}>
+            <Form
+            layout="vertical"
+            >
+              <Form.Item
+                label='First Name and Last Name'>
+                <Input></Input>
+              </Form.Item>
+              <Form.Item
+                label='Organization'>
+                <Input></Input>
+              </Form.Item>
+              <Form.Item
+                label='Locality'>
+                <Input></Input>
+              </Form.Item>
+              <Form.Item
+                label='Province'>
+                <Input></Input>
+              </Form.Item>
+              <Form.Item
+                label='Unit'>
+                <Input></Input>
+              </Form.Item>
+              <Form.Item
+                label='Password'>
+                <Input.Password></Input.Password>
+              </Form.Item>
+              <Button type="submit" className="btn-submit"><span style={{margin:"auto"}}>Submit</span></Button>
+            </Form>
           <div className="layout-title">Quản lí chữ ký số </div>
             <SignaturePad
                      ref={sigCanvas}

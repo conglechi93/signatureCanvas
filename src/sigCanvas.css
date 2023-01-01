@@ -68,3 +68,10 @@
   font-size: 16.5px;
 }
 
+.btn-submit {
+  text-align: center;
+  background-color: #1976d2;
+  color: #FFFFFF;
+  margin: auto;
+}
+
